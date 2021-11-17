@@ -22,11 +22,11 @@ Data Set Description
 -
 ## Compile, Train and Evaluate the Model
 
--Define the model - deep neural net, i.e., the number of input features and hidden nodes for each layer.(Explain why chose the nodes we did)
--Complie the model
--Train the model
--Evaluate the model using test data
--Export our model to HDF5 file
+- Define the model - deep neural net, i.e., the number of input features and hidden nodes for each layer.(Explain why chose the nodes we did)
+- Complie the model
+- Train the model
+- Evaluate the model using test data
+- Export our model to HDF5 file
 
 
 
