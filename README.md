@@ -1,4 +1,4 @@
-# Project-4---Predicting-Hosiptal-Readmission-for-Diabetes
+# Project-4-Predicting-Hospital-Readmission-for-Diabetes
 
 **Data Cleaning**
 
