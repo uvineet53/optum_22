@@ -1,15 +1,39 @@
-# Project-4-Predicting-Hospital-Readmission-for-Diabetes
-## Background
-We are looking to predict hospital readmissions for diabetic patients within a 30 day period, focusing on features that impact readmission, based on the patient's state after being discharged from the hospital. The cost of hospital readmission accounts for a large portion of hospital inpatient services spending. Diabetes is not only one of the top ten leading causes of death in the world, but also the most expensive chronic disease in the United States. Hospitalized patients with diabetes are at higher risk of readmission than those without diabetes. American hospitals spent over $41 billion on diabetic patients who got readmitted within 30 days of discharge. Being able to determine factors that lead to higher readmission in such patients, and correspondingly being able to predict which patients will get readmitted can help hospitals save millions of dollars while improving quality of care. Therefore, reducing readmission rates for diabetic patients has a great potential to reduce medical cost. 
+![header](Resources/images/github_header.png)
 
-Data Source: https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data (102k rows of data, 49 features)
+## About this Project:
+Our team was interested in predicting hospital readmissions for diabetic patients. We focused on features that impact readmission within a 30 day period, based on the patient's state after being discharged from the hospital. 
 
+## Business Implications: 
+The cost of hospital readmission accounts for a large portion of hospital inpatient services spending. Diabetes is not only one of the top ten leading causes of death in the world, but also the most expensive chronic disease in the United States. Hospitalized patients with diabetes are at higher risk of readmission than those without diabetes. American hospitals spend over $41 billion on diabetic patients who are readmitted within 30 days of discharge. Being able to determine factors that lead to higher readmission in such patients, and predicting which patients will get readmitted can help hospitals save millions of dollars while improving quality of care. Therefore, reducing readmission rates for diabetic patients has great potential to reduce medical cost. 
 
-## Preprocessing of the data
+## Technologies: 
+- Python/Pandas
+- Google Colab
+- SQLite
+- SQLAlchemy
+- Flask
+- D3 
+- HTML/CSS/Bootstrap
+- Heroku 
 
-Data Set Description
+## Approach: 
+1. Identify data sources and dependencies
+2. Perform EDA, determine feature set and transform diabetes data
+3. Compile, train and evaluate the model
+4. Compare models for optimization of accuracy metric
+5. Serialize and deserialize model using Pickle and SQLlite
+6. Create Flask App and connect routes to model
+7. Create interactive web app using Javascript D3, html and css
+8. Visualize dashboard in Heroku
 
-**Data Cleaning**
+## Data Source
+https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data 
+Our dataset has 102k rows of data and 49 features. 
+
+## Architectural Diagram
+![header](Resources/images/ml_architecture.png)
+
+## Preprocessing the Data
 - Reduced the data set to include only the intersted features we will use for prerdiction (race, age, gender, weight, time_in_hospital, max_glu_serum, insulin, diabetesMed)
 - Check for and Dropped invalid values (?)
 - Converted readmitted column to binary field
@@ -22,12 +46,18 @@ Data Set Description
 -
 ## Compile, Train and Evaluate the Model
 
-- Define the model - deep neural net, i.e., the number of input features and hidden nodes for each layer.(Explain why chose the nodes we did)
-- Complie the model
+- Define the model 
+- Compile the model
 - Train the model
 - Evaluate the model using test data
 - Export our model to HDF5 file
 
+## Using the Model
+
+## Website Design
+
+## Limitations, Assumptions & Challenges
+- Limited time of project
 
 
 
