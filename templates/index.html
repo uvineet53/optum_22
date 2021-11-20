@@ -9,6 +9,13 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- D3 and Plotly -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -51,24 +58,6 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li> -->
-          <!--           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
           <li><a class="nav-link scrollto" href="#model_features">Machine Learning Model</a></li>
           <li><a class="nav-link scrollto" href="#team_intro">Team</a></li>
         </ul>
@@ -91,48 +80,99 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="">Race</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Gender</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Age</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Weight</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="">Time in Hospital</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Insulin</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Disbetes Medicine</a></h3>
-          </div>
-        </div>
+
+        <form action="{{ url_for('predict')}}"method="post">
+          
+          <label for ="race"><h5>Race:</h5></label>><br>
+          <select id="race" name="race">
+            <option value="1">Caucasian</option>
+            <option value="2">AfricanAmerican</option>
+            <option value="3">Other</option>
+            <option value="4">Asian</option>
+          </select><br>
+
+          <label for ="gender"><h5>Gender:</h5></label>><br>
+          <select id="gender" name="gender">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select><br>
+        
+          <label for ="age"><h5>Age Group:</h5></label>><br>
+          <select id="age" name="age">
+            <option value="1">[50-60)</option>
+            <option value="2">[60-70)</option>
+            <option value="3">[40-50)</option>
+            <option value="4">[70-80)</option>
+            <option value="5">[80-90)</option>
+            <option value="6">[30-40)</option>
+            <option value="7">[0-10)</option>
+            <option value="8">[90-100)</option>
+            <option value="9">[10-20)</option>
+            <option value="10">[20-30)</option>
+          </select><br>
+
+          <label for ="weight"><h5>Weight Group:</h5></label>><br>
+          <select id="weight" name="weight">
+            <option value="1">[75-100)</option>
+            <option value="2">[0-25)</option>
+            <option value="3">[50-75)</option>
+            <option value="4">[100-125)</option>
+            <option value="5">[25-50)</option>
+            <option value="6">[125-150)</option>
+            <option value="7">[150-175)</option>
+            <option value="8">>200</option>
+            <option value="9">[175-200)</option>            
+          </select><br>
+
+          <label for ="time_in_hospital"><h5>Time in Hospital:</h5></label>><br>
+          <select id="time_in_hospital" name="time_in_hospital">
+            <option value="1">2</option>
+            <option value="2">5</option>
+            <option value="3">3</option>
+            <option value="4">11</option>
+            <option value="5">9</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">1</option>
+            <option value="9">8</option>
+            <option value="10">12</option>
+            <option value="11">10</option>
+            <option value="12">4</option>
+            <option value="13">13</option>
+            <option value="14">14</option>            
+          </select><br>
+
+          <label for ="insulin"><h5>Insulin:</h5></label>><br>
+          <select id="insulin" name="insulin">
+            <option value="1">Steady</option>
+            <option value="2">No</option>
+            <option value="3">Down</option>
+            <option value="4">Up</option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+            <option value="11"></option>
+            <option value="12"></option>
+            <option value="13"></option>
+            <option value="14"></option>
+          </select><br>
+
+          <label for ="diabetes_med"><h5>Taking diabetes medicine:</h5></label>><br>
+          <select id="diabetes_med" name="diabetes_med">
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+          </select><br>
+          <br>         
+
+          <button type="submit" class="btn btn-success btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        {{ prediction_text }}
+
       </div>
 
     </div>
