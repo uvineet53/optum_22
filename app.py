@@ -13,9 +13,9 @@ model = joblib.load('models/rf_model.h5')
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nfrxwrxpyogqgs:e50e1c7425c88564e20bad61fb03f85dcca91714c19ec4051143c97c73dba4ed@ec2-34-194-119-178.compute-1.amazonaws.com:5432/d5hbgqogn1i8gj'
-heroku = Heroku(app)
-db = SQLAlchemy(app)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nfrxwrxpyogqgs:e50e1c7425c88564e20bad61fb03f85dcca91714c19ec4051143c97c73dba4ed@ec2-34-194-119-178.compute-1.amazonaws.com:5432/d5hbgqogn1i8gj'
+# heroku = Heroku(app)
+# db = SQLAlchemy(app)
 
 
 
