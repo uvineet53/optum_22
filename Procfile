@@ -1,1 +1,1 @@
-web: gunicorn Project-4-Predicting-Hospial-Readmission-for-Diabetes:app
+web: gunicorn diabetes11:app
