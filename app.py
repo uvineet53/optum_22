@@ -4,12 +4,15 @@ import os
 import time
 from flask import Flask, request, jsonify, render_template
 import joblib
-from flask.ext.heroku import Heroku
+
+#from flask.ext.heroku import Heroku
 #from tensorflow.keras.models import load_model
+
+
 
 # Define a flask app
 app = Flask(__name__)
-model = joblib.load('models/rf_model_reduced.h5')
+model = joblib.load('models/rf_model.h5')
 #model = load_model('models/rf_model.h5')
 
 
