@@ -1,0 +1,11 @@
+Mappings
+
+Female: 0
+Male: 1
+
+AfricanAmerican: 0
+Asian: 1
+Caucasian: 2
+Hispanic: 3
+Other: 4
+
