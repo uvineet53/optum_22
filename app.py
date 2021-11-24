@@ -19,7 +19,7 @@ def index():
 @app.route('/predict',methods=['POST','GET'])
 def predict():
 
-    if request.method == 'POST':
+#     if request.method == 'POST':
 
         age = int(request.form['age'])
         time_in_hospital = int(request.form['time_in_hospital'])
@@ -36,8 +36,8 @@ def predict():
         else:
             return render_template('index.html', prediction_text='High chances of patient readmitted to hospital within 30 days')
 
-    else:
-        return render_template('index.html')
+#     else:
+#         return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
