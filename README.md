@@ -10,8 +10,7 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 - Python/Pandas/Sklearn
 - Keras
 - Google Colab
-- SQLite
-- SQLAlchemy
+- Postgres DB
 - Flask
 - D3 
 - HTML/CSS/Bootstrap
@@ -24,7 +23,7 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 4. Compare models for optimization of accuracy metric
 5. Serialize and deserialize model using Keras and SQLlite
 6. Create Flask App and connect routes to model
-7. Create interactive web app using Javascript D3, html and css
+7. Create interactive web app using Javascript D3, HTML and CSS
 8. Visualize dashboard in Heroku
 
 ## Data Source
