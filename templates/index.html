@@ -51,8 +51,6 @@
     <div class="container d-flex align-items-center justify-content-lg-between">
 
       <h1 class="logo me-auto me-lg-0"><a href="index.html"><span></span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -65,7 +63,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="https://github.com/davism02/Project-4-Predicting-Hospial-Readmission-for-Diabetes.git" class="get-started-btn scrollto">GitHub</a>
 
     </div>
   </header><!-- End Header -->
@@ -76,7 +74,7 @@
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
-          <h1>Predicting Readmission for Diabetes<span>.</span></h1>
+          <h2 style="color:#ffc451;"><strong>Predicting Readmission for Diabetes</strong></h2>
         </div>
       </div>
 
@@ -84,40 +82,41 @@
 
         <form action="{{ url_for('predict')}}"method="post">
 
-          <br>
+          <div class="b"><h5><b>Age:</b></h5>
+            <input class="a" type="Number" name ="age" required="required" value=${age}"></div><br>
 
-          <div class="b"><b>Age:</b><br>
-            <input class="a" type="Number" name ="age" required="required"></div>
+          <div class="b"><h5><b>Time in Hospital (day):</b></h5>
+            <input class="a" type="Number" name ="time_in_hospital" required="required"></div><br>
 
-          <div class="b"><b>Time in Hospital (day):</b><br>
-            <input class="a" type="Number" name ="time_in_hospital" required="required"></div>
+          <div class="b"><h5><b>Number of Procedures:</b></h5>
+            <input class="a" type="Number" name ="number_of_procedures" required="required"></div><br>
 
-          <div class="b"><b>Number of Procedures:</b><br>
-            <input class="a" type="Number" name ="number_of_procedures" required="required"></div>
+          <div class="b"><h5><b>Number of Medications:</b></h5>
+            <input class="a" type="Number" name ="number_of_medications" required="required"></div><br>
 
-          <div class="b"><b>Number of Medications:</b><br>
-            <input class="a" type="Number" name ="number_of_medications" required="required"></div>
-
-          <div class="b"><b>Race:</b><br>
+          <div class="b"><h5><b>Race:</b></h5>
             <select name="race" class="a">
+            <option hidden disabled selected value></option>
             <option value="0">AfricanAmerican</option>
             <option value="1">Asian</option>
             <option value="2">Caucasian</option>
             <option value="3">Hispanic</option>
-            <option value="4">Other</option></select></div>
+            <option value="4">Other</option></select></div><br>
 
-          <div class="b"><b>Gender:</b><br>
+          <div class="b"><h5><b>Gender:</b></h5>
             <select name="gender" class="a">
+            <option hidden disabled selected value></option>
             <option value="0">Female</option>
-            <option value="1">Male</option></select></div>
+            <option value="1">Male</option></select></div><br>
         
           <br>
  
-          <button type="submit" class="btn btn-success btn-block btn-large">Predict</button>
+          <button type="submit" value="submit" class="btn btn-success btn-block btn-large" style="background:#ffc451; border:#ffc451">Predict</button>
         </form>
 
         <br>
-        {{ prediction_text }}
+
+        <h5><strong>{{ prediction_text }}</strong></h5>
 
       </div>
 
@@ -130,12 +129,16 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
+      <div class="section-title">
+        <h2>About</h2><br>
+      </div>
+
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="{{ url_for('static', filename='img/about.jpg') }}" class="img-fluid" alt="">
+            <img src="../static/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Reduce readmission in diabetes patients</h3>
+            <h3>Reduce readmission in diabetes patients</h3><br>
             <p class="fst">
               The cost of hospital readmission accounts for a large portion of hospital inpatient services spending. Diabetes is not only one of the top ten leading causes of death in the world, but also the most expensive chronic disease in the United States.
             </p>
@@ -164,32 +167,50 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Predict Patient Outcome</a></h4>
+              <div class="icon"><i class="bx bx-bullseye"></i></div>
+              <h4>Predict Patient Outcome</h4>
               <p>We use machine learning to predict patient outcome to allow you to implement targeted preventive measure.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Customize Prediction Model</a></h4>
+              <div class="icon"><i class="bx bx-cog"></i></div>
+              <h4>Customize Prediction Model</h4>
               <p>We can customize our machine learning model based on the information you have.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Continious Improvment</a></h4>
+              <div class="icon"><i class="bx bx-line-chart"></i></div>
+              <h4>Continious Improvment</h4>
               <p>As we get a larger dataset over the time, we can improve our model to an higher degree of accuracy.</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div><br></div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Beyond Health Care</a></h4>
+              <div class="icon"><i class="bx bx-infinite"></i></div>
+              <h4>Beyond Health Care</h4>
+              <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-infinite"></i></div>
+              <h4>Beyond Health Care</h4>
+              <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-infinite"></i></div>
+              <h4>Beyond Health Care</h4>
               <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
             </div>
           </div>
@@ -211,11 +232,11 @@
                   <h4>Predicted</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Whether a patient is readmitted within 30 days.
+                    <strong>Early Readmission</strong> is defined as within 30 days, else <strong>Other</strong> if the patient was readmitted in more than 30 days or was not readmitted.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
-              </div><!-- End Feature Diabetes Med -->
+              </div><!-- End Feature Readmission-->
               
               <div class="swiper-slide">
                 <div class="testimonial-item">
@@ -223,7 +244,7 @@
                   <h4>Demographic Information</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Caucasian, Asian, African American, Hispanic and other.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -235,7 +256,7 @@
                   <h4>Demographic Information</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Male or Female.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -247,7 +268,7 @@
                   <h4>Demographic Information</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Grouped in 10-year intervals [0, 10), [10, 20), ..., [90, 100).
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -255,51 +276,40 @@
   
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <h3>Weight</h3>
-                  <h4>Anthropometric Indicator</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div><!-- End Feature Weight -->
-  
-              <div class="swiper-slide">
-                <div class="testimonial-item">
                   <h3>Time in Hospital</h3>
                   <h4>Medical Indicator</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Integer number of days between admission and discharge.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
               </div><!-- End Feature Time in Hospital -->
-
+  
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <h3>Insulin</h3>
+                  <h3>Number of Procedures</h3>
                   <h4>Medical Indicator</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Number of procedures (other than lab tests) performed during the encounter.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
-              </div><!-- End Feature Insulin -->
+              </div><!-- End Feature Number of Procedures -->
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <h3>Diabetes Medicine</h3>
+                  <h3>Number of medications</h3>
                   <h4>Medical Indicator</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Description...
+                    Number of distinct generic names administered during the encounter.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
-              </div><!-- End Feature Diabetes Med -->
+              </div><!-- End Feature Number of Medications -->
+
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -313,7 +323,6 @@
 
         <div class="section-title">
           <h2>Machine Learning Model</h2>
-          <!-- <p>Check our machine learning model</p> -->
         </div>
 
         <div class="row no-gutters">
@@ -335,23 +344,23 @@
                 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2" class="purecounter"></span>
+                    <i class="bi bi-award"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="2" class="purecounter"></span>
                     <p><strong>Features</strong> are included to predict patient readmission outcome.</p>
                   </div>
                 </div>
                 
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
-                    <i class="bi bi-award"></i>
+                    <i class="bi bi-journal-richtext"></i>
                     <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="4" class="purecounter"></span>
                     <p><strong>Machine Learning Models</strong> tested to pick the best model</p>
                   </div>
                 </div>
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="2" class="purecounter"></span>
+                    <i class="bi bi-bullseye"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="74" data-purecounter-duration="2" class="purecounter"></span>
                     <p><strong>Percent</strong> accuracy blabla...</p>
                   </div>
                 </div>
@@ -390,7 +399,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="../static/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="../static/img/team/team-1.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
@@ -408,7 +417,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="../static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="../static/img/team/team-2.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
@@ -426,7 +435,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="../static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <img src="../static/img/team/team-3.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
@@ -444,7 +453,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
-                <img src="../static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <img src="../static/img/team/team-4.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
