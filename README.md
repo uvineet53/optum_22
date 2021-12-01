@@ -66,12 +66,14 @@ Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains
 - Random Forest model had the best performance, with 74% accuracy, best F1 score, confusion matrix and ROC curve
 - Hypertuned the model which resulted in a small improvement of .15%
 - Calculated distritution of accuracy scores across 50 splits to verify model
-- Evaluated feature performance
+- Evaluated feature performance <br>
 ![features](static/images/feature_importance.png)
 
 ## Using the Model
 Our website was built using Boostrap, custom HTML and CSS. <br>
+
 ![website](static/images/website.png) <br>
+
 To use the model, select a value for each feature. Based on values chosen, the model will predict whether a patient with selected features is at high or low risk for being readmitted to the hospital within 30 days. This site will be used by hospital staff to assess patience readmittance.
 
 ## Limitations 
@@ -84,10 +86,10 @@ To use the model, select a value for each feature. Based on values chosen, the m
 - Consider potential bias in our data, especially related to demographic features
 
 ## Contributors
-Michelle Davis -  https://github.com/davism02
-Yingying Li - https://github.com/Yingying-Li-Data
-Grey Hardy -  https://github.com/ItsGreyedOut
-Lauren To -  https://github.com/laurenemilyto
+- Michelle Davis -  https://github.com/davism02
+- Yingying Li - https://github.com/Yingying-Li-Data
+- Grey Hardy -  https://github.com/ItsGreyedOut
+- Lauren To -  https://github.com/laurenemilyto
 
 
 
