@@ -56,8 +56,8 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#model_features">Machine Learning Model</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#team_intro">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -83,7 +83,7 @@
         <form action="{{ url_for('predict')}}"method="post">
 
           <div class="b"><h5><b>Age:</b></h5>
-            <input class="a" type="Number" name ="age" required="required" value=${age}"></div><br>
+            <input class="a" type="Number" name ="age" required="required"></div><br>
 
           <div class="b"><h5><b>Time in Hospital (day):</b></h5>
             <input class="a" type="Number" name ="time_in_hospital" required="required"></div><br>
@@ -155,70 +155,6 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <!-- <p>Services Provided</p> -->
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-bullseye"></i></div>
-              <h4>Predict Patient Outcome</h4>
-              <p>We use machine learning to predict patient outcome to allow you to implement targeted preventive measure.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-cog"></i></div>
-              <h4>Customize Prediction Model</h4>
-              <p>We can customize our machine learning model based on the information you have.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-line-chart"></i></div>
-              <h4>Continious Improvment</h4>
-              <p>As we get a larger dataset over the time, we can improve our model to an higher degree of accuracy.</p>
-            </div>
-          </div>
-
-          <div><br></div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-infinite"></i></div>
-              <h4>Beyond Health Care</h4>
-              <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-infinite"></i></div>
-              <h4>Beyond Health Care</h4>
-              <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-infinite"></i></div>
-              <h4>Beyond Health Care</h4>
-              <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
       <!-- ======= Model Features Section ======= -->
       <section id="model_features" class="testimonials">
@@ -331,14 +267,14 @@
             <div class="content d-flex flex-column justify-content-center">
               <h3>About our machine learning model</h3>
               <p>
-                We used a ... dataset to blabla...
+              <br>
               </p>
               <div class="row">
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Years</strong> of hospital data from across the US</p>
+                    <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="2" class="purecounter"></span>
+                    <p><strong>Years</strong> of hospital data from across the US.</p>
                   </div>
                 </div>
                 
@@ -353,15 +289,15 @@
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Machine Learning Models</strong> tested to pick the best model</p>
+                    <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2" class="purecounter"></span>
+                    <p><strong>Machine Learning Models</strong> tested to pick the best model.</p>
                   </div>
                 </div>
                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                   <div class="count-box">
                     <i class="bi bi-bullseye"></i>
                     <span data-purecounter-start="0" data-purecounter-end="74" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Percent</strong> accuracy blabla...</p>
+                    <p><strong>Percent</strong> accuracy while using the Random Forest Model.</p>
                   </div>
                 </div>
               </div>
@@ -371,6 +307,70 @@
 
       </div>
     </section><!-- End Model Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+          <div class="container" data-aos="fade-up">
+    
+            <div class="section-title">
+              <h2>Services</h2>
+              <!-- <p>Services Provided</p> -->
+            </div>
+    
+            <div class="row">
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-comment-dots"></i></div>
+                  <h4>Data Storytelling</h4>
+                  <p>We find patterns and trends in data to uncover meaningful insight.</p>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+                  <h4>Data Visualization</h4>
+                  <p>We build userfriendly dashboards, apps, and websites to display information.</p>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-bullseye"></i></div>
+                  <h4>Predict Patient Outcome</h4>
+                  <p>We use machine learning to predict patient outcome to allow you to implement targeted preventive measure.</p>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-cog"></i></div>
+                  <h4>Customize Prediction Model</h4>
+                  <p>We can customize our machine learning model based on the information you have.</p>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-line-chart"></i></div>
+                  <h4>Continious Improvment</h4>
+                  <p>As we get a larger dataset over the time, we can improve our model to an higher degree of accuracy.</p>
+                </div>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bx-infinite"></i></div>
+                  <h4>Beyond Health Care</h4>
+                  <p>Our group's expertise is beyond the health care field. Feel free to reach out to <a href=#team_intro>us</a> for other inqury.</p>
+                </div>
+              </div>
+    
+            </div>
+    
+          </div>
+        </section><!-- End Services Section -->
 
     <!-- ======= Team Intro Section ======= -->
     <section id="team_intro" class="cta">
@@ -404,6 +404,7 @@
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
                   <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+                  <a href="https://github.com/ItsGreyedOut" target="_blank"><i class="bi bi-github"></i></a>
                   <a href="https://www.linkedin.com/in/greyhardy/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -422,6 +423,7 @@
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
                   <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+                  <a href="https://github.com/laurenemilyto" target="_blank"><i class="bi bi-github"></i></a>
                   <a href="https://www.linkedin.com/in/lauren-to/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -440,6 +442,7 @@
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
                   <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+                  <a href="https://github.com/davism02" target="_blank"><i class="bi bi-github"></i></a>
                   <a href="https://www.linkedin.com/in/michellemdavis/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
@@ -458,6 +461,7 @@
                   <!-- <a href=""><i class="bi bi-twitter"></i></a> -->
                   <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
                   <!-- <a href=""><i class="bi bi-instagram"></i></a> -->
+                  <a href="https://github.com/Yingying-Li-Data" target="_blank"><i class="bi bi-github"></i></a>
                   <a href="https://www.linkedin.com/in/yingying-li/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
