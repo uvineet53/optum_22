@@ -39,7 +39,7 @@ def predict():
         if prediction == 0:
             return render_template('index.html', prediction_text='Low chances of patient readmitted to hospital within 30 days.')
         else:
-            return render_template('index.html', prediction_text='High chances of patient readmitted to hospital within 30 days')
+            return render_template('index.html', prediction_text='High chances of patient readmitted to hospital within 30 days.')
 
     # else:
     #     return render_template('index.html')
