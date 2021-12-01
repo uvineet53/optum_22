@@ -44,7 +44,8 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 7. Visualize dashboard in Heroku
 
 ## Data Source
-Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains 102k rows of data and 50 features. <br>
+Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains 102k rows of data and 50 features. 
+
 **Link**: [Data Source](https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data) 
 
 
