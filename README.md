@@ -1,18 +1,19 @@
 ![header](static/images/github_header.png)
 
 ## About this Project:
-Our team was interested in predicting hospital readmissions for diabetic patients. We focused on features that impact readmission within a 30 day period, based on the patient's state after being discharged from the hospital. 
+Our team was interested in predicting hospital readmissions for diabetic patients. We focused on features that impact readmission within a 30 day period, based on the patient's state after being discharged from the hospital. We created an interactive application that predicts whether a patient is at high risk or low risk for being readmitted to a hospital within 30 days, using a random forest classification model.  
 
-## Business Implications: 
+Link: [https://diabetes11.herokuapp.com/](https://diabetes11.herokuapp.com/)
+
+## Background: 
 The cost of hospital readmission accounts for a large portion of hospital inpatient services spending. Diabetes is not only one of the top ten leading causes of death in the world, but also the most expensive chronic disease in the United States. Hospitalized patients with diabetes are at higher risk of readmission than those without diabetes. American hospitals spend over $41 billion on diabetic patients who are readmitted within 30 days of discharge. Being able to determine factors that lead to higher readmission in such patients, and predicting which patients will get readmitted can help hospitals save millions of dollars while improving quality of care. Therefore, reducing readmission rates for diabetic patients has great potential to reduce medical cost. 
 
 ## Technologies: 
-- Python/Pandas/Sklearn
-- Keras
+- Python (pandas, matplotlib, numpy, scikit-learn)
 - Google Colab
-- Postgres DB
+- PostgreSQL
 - Flask
-- D3 
+- SQLAlchemy
 - HTML/CSS/Bootstrap
 - Heroku 
 
@@ -21,43 +22,50 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 2. Perform EDA, determine feature set and transform diabetes data
 3. Compile, train and evaluate the model
 4. Compare models for optimization of accuracy metric
-5. Serialize and deserialize model using Keras and SQLlite
-6. Create Flask App and connect routes to model
-7. Create interactive web app using Javascript D3, HTML and CSS
-8. Visualize dashboard in Heroku
+5. Iterate on models using SMOTE to address data imbalance
+5. Serialize and deserialize model using Joblib
+6. Create Flask App and load model
+7. Visualize dashboard in Heroku
 
 ## Data Source
-https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data 
-Our dataset has 102k rows of data and 49 features. 
+Data was collected from 130 Us Hospital from 1999 to 2008. The dataset has 102k rows of data and 50 features. 
+Link: [Data Source](https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data) 
+
 
 ## Architectural Diagram
 ![header](static/images/ml_architecture.png)
 
 ## Preprocessing the Data
-- Reduced the data set to include only the intersted features we will use for prerdiction (race, age, gender, weight, time_in_hospital, max_glu_serum, insulin, diabetesMed)
-- Check for and Dropped invalid values (?)
-- Converted readmitted column to binary field
-- Determine the number of unique values in each column.  Dropped colum (max_glu_serum) since there was only 1 unique value
-- Convert categorical data to numberic with 'pdget_dummies' - one hot encoding
-- Split the preprocessed data into a training and testing dataset
-- Create a StandardScaler instances
-- Fit the StandardScale
-- Scale the data
--
+- Reduced the data set to six features: age, gender, time_in_hospital, num_procedures, num_medications, race
+- Dropped null values
+- Converted target value 'Readmitted' to binary classes
+- Convert categorical data to numberic 
+- Split the preprocessed data into training and testing sets
+- Cross Validation/Shufflesplit
+- Normalize data with StandardScaler
+
 ## Compile, Train and Evaluate the Model
+- Evaluated 5 models: Decision Tree Classifier, Random Forest Classiifier, KNN, Logistic Regression and Neural Network.  
+- Used SMOTE to address imbalanced data 
+- Random Forest model had the best performance, with 74% accuracy, best F1 score, confusion matrix and ROC curve
+- Hypertuned the model which resulted in a small improvement of .15%
+- Calculated distritution of accuracy scores across 50 splits to verify model
+- Evaluated feature performance
+![features](static/images/final_features.png)
 
-- Define the model 
-- Compile the model
-- Train the model
-- Evaluate the model using test data
-- Export our model to HDF5 file
 
-## Using the Model
+## Website & Using the Model:
+Our website was built using Boostrap, custom HTML and CSS. To use the model, select a value for each feature. Based on values chosen, the model will predict whether a patient with selected features is at high or low risk for being readmitted to the hospital within 30 days. This site can be used by hospital staff to assess patience readmittance.
+![website](static/images/website.png)
 
-## Website Design
-
-## Limitations, Assumptions & Challenges
+## Limitations & Next Steps
 - Limited time of project
+- Data freshness (2008)
+- Given more time, we would: 
+- Evaluate further feautures, weight features, and consider models like AdaBoost or XGBoost
+- Enable user input to continue to train our model  
+- Consider potential bias in our data, especially related to demographic features
+
 
 
 
