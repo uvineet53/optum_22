@@ -67,12 +67,12 @@ Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains
 - Hypertuned the model which resulted in a small improvement of .15%
 - Calculated distritution of accuracy scores across 50 splits to verify model
 - Evaluated feature performance <br>
-![features](static/images/feature_importance.png)
+<img src="static/images/feature_importance.png" alt="features" width = 500/>
 
 ## Using the Model
 Our website was built using Boostrap, custom HTML and CSS. <br>
 
-<img src="static/images/website.png" alt="website_design" width = 300 />
+<img src="static/images/website.png" alt="website_design" width = 500/>
 
 To use the model, select a value for each feature. Based on values chosen, the model will predict whether a patient with selected features is at high or low risk for being readmitted to the hospital within 30 days. This site will be used by hospital staff to assess patience readmittance.
 
