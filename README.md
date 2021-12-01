@@ -12,8 +12,8 @@
   7. [Preprocessing](#preprocessing)
   8. [Compiling, Training and Evaluating the Model](#compiling)
   9. [Using the Model](#using)
-  10. [Limitations] (#limitations)
-  11. [Next Steps] (#next)
+  10. [Limitations](#limitations)
+  11. [Next Steps](#next-steps)
   12. [Contributors](#contributors)
 
 ## About
@@ -72,7 +72,7 @@ Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains
 ## Using the Model
 Our website was built using Boostrap, custom HTML and CSS. <br>
 
-![website](static/images/website.png) <br>
+<img src="static/images/website.png" alt="website_design" width = 300 />
 
 To use the model, select a value for each feature. Based on values chosen, the model will predict whether a patient with selected features is at high or low risk for being readmitted to the hospital within 30 days. This site will be used by hospital staff to assess patience readmittance.
 
