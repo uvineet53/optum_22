@@ -30,6 +30,13 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 - PostgreSQL
 - Flask
 - SQLAlchemy
+
+## Technologies: 
+- Python/Pandas/Sklearn
+- Keras
+- Google Colab
+- PostgreSQL
+- Flask
 - HTML/CSS/Bootstrap
 - Heroku 
 
@@ -47,7 +54,6 @@ The cost of hospital readmission accounts for a large portion of hospital inpati
 Data was collected from 130 US Hospitals from 1999 to 2008. The dataset contains 102k rows of data and 50 features. 
 
 **Link**: [Data Source](https://www.kaggle.com/iabhishekofficial/prediction-on-hospital-readmission/data) 
-
 
 ## Architectural Diagram
 ![header](static/images/ml_architecture.png)
@@ -91,8 +97,3 @@ To use the model, select a value for each feature. Based on values chosen, the m
 - Yingying Li - https://github.com/Yingying-Li-Data
 - Grey Hardy -  https://github.com/ItsGreyedOut
 - Lauren To -  https://github.com/laurenemilyto
-
-
-
-
-
